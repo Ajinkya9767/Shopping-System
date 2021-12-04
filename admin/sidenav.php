@@ -25,9 +25,6 @@
       Tip 2: you can also add an image using data-image tag
   -->
       <div class="logo">
-        <a href="" class="simple-text logo-normal">
-          <!--ADMIN-->
-        </a>
       </div>
       <div class="sidebar-wrapper ps-container ps-theme-default" data-ps-id="3a8db1f4-24d8-4dbf-85c9-4f5215c1b29a">
         <ul class="nav">
@@ -63,12 +60,7 @@
               <p>Logout</p>
             </a>
           </li>
-          <!-- <li class="nav-item active-pro ">
-                <a class="nav-link" href="./upgrade.html">
-                    <i class="material-icons">unarchive</i>
-                    <p>Upgrade to PRO</p>
-                </a>
-            </li> -->
+    
         </ul>
       </div>
     </div>
