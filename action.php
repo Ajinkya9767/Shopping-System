@@ -124,7 +124,7 @@ if(isset($_POST["getProduct"])){
 									<div class='product-body'>
 										<p class='product-category'>$cat_name</p>
 										<h3 class='product-name header-cart-item-name'><a href='product.php?p=$pro_id'>$pro_title</a></h3>
-										<h4 class='product-price header-cart-item-info'>$pro_price</h4>
+										<h4 class='product-price header-cart-item-info'>₹$pro_price</h4>
 									</div>
 									<div class='add-to-cart'>
 										<button pid='$pro_id' id='product' class='add-to-cart-btn block2-btn-towishlist' href='#'><i class='fa fa-shopping-cart'></i> add to cart</button>
@@ -157,12 +157,10 @@ if(isset($_POST["get_seleted_Category"]) || isset($_POST["selectBrand"]) || isse
 	$run_query = mysqli_query($con,$sql);
 	while($row=mysqli_fetch_array($run_query)){
 			$pro_id    = $row['product_id'];
-			$pro_cat   = $row['product_cat'];
 			$pro_brand = $row['product_brand'];
 			$pro_title = $row['product_title'];
 			$pro_price = $row['product_price'];
 			$pro_image = $row['product_image'];
-            $cat_name = $row["cat_title"];
 			echo "
 					
                         
@@ -172,9 +170,8 @@ if(isset($_POST["get_seleted_Category"]) || isset($_POST["selectBrand"]) || isse
 										<img  src='product_images/$pro_image'  style='max-height: 170px;' alt=''>
 									</div></a>
 									<div class='product-body'>
-										<p class='product-category'>$cat_name</p>
 										<h3 class='product-name header-cart-item-name'><a href='product.php?p=$pro_id'>$pro_title</a></h3>
-										<h4 class='product-price header-cart-item-info'>$pro_price</h4>
+										<h4 class='product-price header-cart-item-info'>₹$pro_price</h4>
 									</div>
 									<div class='add-to-cart'>
 										<button pid='$pro_id' id='product' href='#' tabindex='0' class='add-to-cart-btn'><i class='fa fa-shopping-cart'></i> add to cart</button>
@@ -303,7 +300,7 @@ if (isset($_POST["Common"])) {
 												</div>
 												<div class="product-body">
 													<h3 class="product-name"><a href="#">'.$product_title.'</a></h3>
-													<h4 class="product-price"><span class="qty">'.$n.'</span>$'.$product_price.'</h4>
+													<h4 class="product-price"><span class="qty">'.$n.'</span>₹'.$product_price.'</h4>
 												</div>
 												
 											</div>'
@@ -315,7 +312,7 @@ if (isset($_POST["Common"])) {
             
             echo '<div class="cart-summary">
 				    <small class="qty">'.$n.' Item(s) selected</small>
-				    <h5>$'.$total_price.'</h5>
+				    <h5>₹'.$total_price.'</h5>
 				</div>'
             ?>
 				
@@ -385,7 +382,6 @@ if (isset($_POST["Common"])) {
 							<td data-th="Subtotal" class="text-center"><input type="text" class="form-control total" value="'.$product_price.'" readonly="readonly"></td>
 							<td class="actions" data-th="">
 							<div class="btn-group">
-								<a href="#" class="btn btn-info btn-sm update" update_id="'.$product_id.'"><i class="fa fa-refresh"></i></a>
 								
 								<a href="#" class="btn btn-danger btn-sm remove" remove_id="'.$product_id.'"><i class="fa fa-trash-o"></i></a>		
 							</div>							
@@ -400,7 +396,7 @@ if (isset($_POST["Common"])) {
 				<tfoot>
 					
 					<tr>
-						<td><a href="store.php" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
+						<td><a href="index.php" class="btn btn-warning"><i class="fa fa-angle-left"></i> Continue Shopping</a></td>
 						<td colspan="2" class="hidden-xs"></td>
 						<td class="hidden-xs text-center"><b class="net_total" ></b></td>
 						<div id="issessionset"></div>
@@ -422,7 +418,7 @@ if (isset($_POST["Common"])) {
 					
 						<form action="checkout.php" method="post">
 							<input type="hidden" name="cmd" value="_cart">
-							<input type="hidden" name="business" value="shoppingcart@puneeth.com">
+							<input type="hidden" name="business" value="shoppingcart@123.com">
 							<input type="hidden" name="upload" value="1">';
 							  
 							$x=0;
@@ -440,10 +436,10 @@ if (isset($_POST["Common"])) {
 								}
 							  
 							echo   
-								'<input type="hidden" name="return" value="http://localhost/myfiles/public_html/payment_success.php"/>
-					                <input type="hidden" name="notify_url" value="http://localhost/myfiles/public_html/payment_success.php">
-									<input type="hidden" name="cancel_return" value="http://localhost/myfiles/public_html/cancel.php"/>
-									<input type="hidden" name="currency_code" value="USD"/>
+								'<input type="hidden" name="return" value="http://localhost/shopping-website-DBMS/payment_success.php"/>
+					                <input type="hidden" name="notify_url" value="http://localhost/shopping-website-DBMS/payment_success.php">
+									<input type="hidden" name="cancel_return" value="http://localhost/shopping-website-DBMS/cancel.php"/>
+									<input type="hidden" name="currency_code" value="₹"/>
 									<input type="hidden" name="custom" value="'.$_SESSION["uid"].'"/>
 									<input type="submit" id="submit" name="login_user_with_product" name="submit" class="btn btn-success" value="Ready to Checkout">
 									</form></td>

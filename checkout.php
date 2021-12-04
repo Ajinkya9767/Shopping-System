@@ -257,7 +257,7 @@ span.price {
 					
 						echo "	
 
-						<tr><td><p>$item_number_</p></td><td><p>$item_name_</p></td><td ><p>$quantity_</p></td><td ><p>$amount_</p></td></tr>";
+						<tr><td><p>$item_number_</p></td><td><p>$item_name_</p></td><td ><p>$quantity_</p></td><td ><p>₹$amount_</p></td></tr>";
 						
 						$i++;
 					}
@@ -268,7 +268,7 @@ span.price {
 				</table>
 				<hr>
 				
-				<h3>total<span class='price' style='color:black'><b>$$total</b></span></h3>";
+				<h3>total<span class='price' style='color:black'><b>₹$total</b></span></h3>";
 					
 				}
 				?>
@@ -277,11 +277,11 @@ span.price {
 		</div>
 	</div>
 </section>
-		<div id="newsletter" class="section">
+		<!-- <div id="newsletter" class="section"> -->
 			<!-- container -->
-			<div class="container">
+			<!-- <div class="container"> -->
 				<!-- row -->
-				<div class="row">
+				<!-- <div class="row">
 					<div class="col-md-12">
 						<div class="newsletter">
 							<p>Sign Up for the <strong>NEWSLETTER</strong></p>
@@ -305,11 +305,11 @@ span.price {
 							</ul>
 						</div>
 					</div>
-				</div>
+				</div> -->
 				<!-- /row -->
-			</div>
+			<!-- </div> -->
 			<!-- /container -->
-		</div>
+		<!-- </div> --> 
 		
 <?php
 include "footer.php";

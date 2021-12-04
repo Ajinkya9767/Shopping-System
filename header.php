@@ -172,7 +172,7 @@ session_start();
 						<!-- LOGO -->
 						<div class="col-md-6">
 							<div class="header-logo">
-								<a href="#" class="logo">
+								<a href="http://localhost/shopping-website-DBMS/index.php" class="logo">
 								<font style="font-style:normal; font-size: 33px;color: aliceblue;font-family: serif">
                                         Online Shop
                                     </font>
@@ -181,8 +181,7 @@ session_start();
 							</div>
 						</div>
 						<!-- /LOGO -->
-
-						
+	
 
 						<!-- ACCOUNT -->
 						<div class="col-md-6 clearfix">
@@ -230,15 +229,7 @@ session_start();
 			<!-- /MAIN HEADER -->
 		</header>
 		<!-- /HEADER -->
-		<nav id='navigation'>
-			<!-- container -->
-            <div class="container" id="get_category_home">
-                
-            </div>
-				<!-- responsive-nav -->
-				
-			<!-- /container -->
-		</nav>
+		
             
 
 		<!-- NAVIGATION -->
@@ -265,7 +256,7 @@ session_start();
                         </div>
                       </div>
                 <div class="modal fade" id="Modal_register" role="dialog">
-                        <div class="modal-dialog" style="">
+                        <div class="modal-dialog" >
 
                           <!-- Modal content-->
                           <div class="modal-content">

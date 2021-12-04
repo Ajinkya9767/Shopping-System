@@ -55,7 +55,7 @@ if(isset($_POST["email"]) && isset($_POST["password"])){
 				if(!isset($BackToMyPage)) {
 					header('Location: '.$BackToMyPage);
 					echo"<script type='text/javascript'>
-					
+					location.href='cart.php';
 					</script>";
 				} else {
 					header('Location: index.php'); // default page
